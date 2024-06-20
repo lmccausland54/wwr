@@ -21,8 +21,9 @@ body {
 
 header {
     background-color: #4E423F;
-    display: grid;
-    grid-template-columns: 150px auto;
+    opacity: .90;
+    /* display: grid;
+    grid-template-columns: 150px auto; */
 }
 nav {
     display: flex;
@@ -33,6 +34,7 @@ nav a {
     text-align: center;
     color:#FEFAEE;
     text-decoration: none;
+    
 }
 
 nav a:hover {
@@ -79,9 +81,7 @@ main section img {
     box-sizing: border-box;
 }
 
-#background {
-    height: 725px;
-}
+
 
 body {
     background-color: #5C8184;
@@ -117,15 +117,21 @@ h2 {
 
 .card-img {
     border: 10px solid #4E423F;
-    transform: transform .5s;
+    /* transform: transform .5s; */
     box-shadow: 5px 5px 10px #6f7364;
+    width: 500px;
+
+}
+
+.card-img{
+    width: 500px;
 }
 .card-img:hover {
     opacity: .6;
     transform: scale(1.1);
 }
 
-.card-img, .mountains {
+.card-img {
     width: 100%;
 }
 
@@ -147,38 +153,53 @@ h2 {
 }
 
 
-.rivers-card, .camping-card, .rapids-card {
+ .rivers-card, .camping-card, .rapids-card {
     margin: 200px 0;
-}
+} 
 
+
+.rivers-card, .camping-card, .rapids-card{
+    width: 350px
+    
+}
 .rivers-card {
     grid-column: 2/4;
     grid-row: 2/3;
+    /* margin-right: 30px; */
+    margin-left: 150px;
+    /* width: 485px; */
+
 }
 
 .camping-card {
-    grid-column: 5/7;
+    grid-column: 7/9;
     grid-row: 2/3;
+    margin-right: 10px;
+    margin-left: 150px;
+    
 }
 .rapids-card {
-    grid-column: 8/10;
+    grid-column: 9/11;
     grid-row: 2/3;
 }
 
 
 
 .msg {
-    background-color: #FEFAEE; 
+    background-color: #4E423F; 
+    z-index: 2;
     line-height: 1.5em;
     padding: 35px;
     margin-top: 40px;
-    grid-column: 6/10;
+    grid-column: 8/10;
     grid-row: 6/7;
-    box-shadow: 5px 5px 10px #FEFAEE;
+    box-shadow: 5px 5px 10px black;
+    color: #FEFAEE;
 }
 .msg p {
     font-size: .8em;
     padding-bottom: 15px;
+    
 }
 
 #logo_link {
@@ -208,11 +229,13 @@ footer .social img {
     padding-top: 15px;
 }
 
-.mountains {
-    width: 100%;
-    grid-column: 2-7;
+#mountains {
+    /* width: 100%; */
+    grid-column: 2/9;
     grid-row: 5/8;
-    box-shadow: 5px 5px 10px #FEFAEE;;
+    box-shadow: 5px 5px 10px #4E423F;
+    z-index: -1;
+    margin-left: 100px;
 
 }
 
@@ -220,8 +243,9 @@ footer .social img {
 #background {
     background-color: #FEFAEE;
     height: 725px;
-    grid-column: 1/11;
+    grid-column: 2/12;
     grid-row: 4/9;
+    z-index: -2;
 }
 
 .logo {
@@ -231,6 +255,109 @@ footer .social img {
 .icon {
     width: 80px;
     padding-top: 10px;
+}
+
+/* 
+****************************************RIVERS SUBPAGE********************************************************** */
+
+#hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 1;
+    justify-self: center;
+    font-size: 100px;
+    text-shadow: 1px 1px 5px white;
+    color:#FEFAEE;
+}
+
+#hero-river {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: -1;
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+#rivers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 40px;
+}
+
+
+
+#salmon-river {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#sr-text {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-bottom: 100px;
+    margin-top: -50px;
+}
+
+#sriver{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 500px;
+    margin-top: 100px;
+} 
+
+#dg_canyon {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+#dgtext {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    margin-top: -50px;
+    margin-bottom: 100px;
+}
+
+#dg-img {
+    grid-column: 1/2;
+    grid-row: 3/5;
+    height: 500px;
+    width: 700px;
+}
+
+#grand_canyon {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    text-align: center;
+    margin-left: 20px;
+    
+} 
+
+#gctext {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    margin-top: -50px;
+    margin-bottom: 100px;
+}
+
+#gc_img {
+    grid-column: 2/3;
+    grid-row: 5/7;
+    height: 500px;
+    width: 700px;
+}
+
+#gc_img, #dg-img, #sriver {
+    box-shadow: 5px 5px 10px black;
 }
 
 
